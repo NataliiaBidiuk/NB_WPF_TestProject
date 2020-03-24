@@ -12,7 +12,7 @@ namespace TestServerSide.Controllers
 	/// <seealso cref="Controller" />
 	[Route("slider")]
 	[ApiController]
-	public class SliderController : Controller
+	public class SliderController : ControllerBase
 	{
 		/// <summary>
 		/// Gets this instance.

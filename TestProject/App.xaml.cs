@@ -19,11 +19,6 @@ namespace TestProject
 		#region Private Fields
 
 		/// <summary>
-		/// The builder
-		/// </summary>
-		private readonly ContainerBuilder _builder;
-
-		/// <summary>
 		/// The container scope
 		/// </summary>
 		private static ILifetimeScope _containerScope;
@@ -37,7 +32,7 @@ namespace TestProject
 		/// </summary>
 		public App()
 		{
-			_builder = new ContainerBuilder();
+			var _builder = new ContainerBuilder();
 
 			//repository
 			_builder.RegisterInstance(new SliderRepository()).As<ISliderRepository>();
@@ -46,7 +41,7 @@ namespace TestProject
 			_builder.RegisterInstance(new SliderService(new SliderRepository())).As<ISliderService>();
 
 			var container = _builder.Build();
-			_containerScope = container.BeginLifetimeScope();	
+			_containerScope = container.BeginLifetimeScope();
 		}
 
 		#endregion

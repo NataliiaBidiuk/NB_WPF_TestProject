@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestProject"
-        Title="Slider"
+        Title="{x:Static local:AppResource.txtSlider}" 
         Height="250"
         Width="700">
     <Grid VerticalAlignment="Center"
@@ -26,12 +26,12 @@
         <Button Grid.Row="2" 
                 Style="{StaticResource DefaultButtonStyle}"
                 HorizontalAlignment="Left"
-                Content="Start" 
+                Content="{x:Static local:AppResource.txtStart}"
                 Command="{Binding StartCommand}" />
 
         <Button Grid.Row="2"  
                 Style="{StaticResource DefaultButtonStyle}"
-                Content="Cancel" 
+                Content="{x:Static local:AppResource.txtCancel}" 
                 Command="{Binding CancelCommand}" />
     </Grid>
 </Window>

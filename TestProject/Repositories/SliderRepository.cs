@@ -50,7 +50,7 @@ namespace TestProject.Repositories
 			{
 				var json = await httpClient.GetStringAsync(GET_SLIDER_VALUE);
 
-				return await Task.Run(() => JsonConvert.DeserializeObject<int>(json));
+				return JsonConvert.DeserializeObject<int>(json);
 			}
 			catch (Exception ex)
 			{
